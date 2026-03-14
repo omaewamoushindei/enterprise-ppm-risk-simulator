@@ -19,7 +19,7 @@ The goal is to demonstrate how **simulation, SQL analytics, and interactive dash
 
 The Streamlit dashboard provides an overview of portfolio health, departmental risk exposure, and operational rework trends.
 
-![Portfolio Dashboard](images/dashboard.png)
+![Portfolio Dashboard](images/dashboard.jpg)
 
 ---
 
