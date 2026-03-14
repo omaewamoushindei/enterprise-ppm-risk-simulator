@@ -81,19 +81,30 @@ The Streamlit dashboard allows users to explore:
 1. **Clone the repository:**
 ```bash
 git clone [https://github.com/omaewamoushindei/enterprise-ppm-risk-simulator.git](https://github.com/omaewamoushindei/enterprise-ppm-risk-simulator.git)
+```
 
- * Install dependencies:
+2. **Install dependencies:**
+```bash
 pip install -r requirements.txt
+```
 
- * Run the dashboard:
+3. **Run the dashboard:**
+```bash
 streamlit run app.py
+```
 
-💡 Example Insights
+---
+
+## 💡 Example Insights
 The analytics layer can reveal critical business insights such as:
- * Which departments accumulate the highest risk exposure.
- * How operational issues affect portfolio performance over time.
- * Which projects are most likely to experience severe cascading delays.
-📂 Project Structure
+- Which departments accumulate the highest risk exposure.
+- How operational issues affect portfolio performance over time.
+- Which projects are most likely to experience severe cascading delays.
+
+---
+
+## 📂 Project Structure
+```text
 enterprise-ppm-risk-simulator
 │
 ├── data/
@@ -108,7 +119,9 @@ enterprise-ppm-risk-simulator
 ├── simulation.ipynb
 ├── requirements.txt
 └── README.md
+```
 
-🎯 Purpose:
+---
+
+**🎯 Purpose:**
 This project was created as a portfolio analytics demonstration to showcase how simulation, SQL analytics, and data visualization can be combined to analyze complex enterprise project portfolios.
-
