@@ -1,122 +1,114 @@
-# Enterprise Project Portfolio Risk & Analytics Simulator
+# 🚀 Enterprise Project Portfolio Risk & Analytics Simulator
 
-## Project Overview
+> **Simulation + SQL Analytics + Streamlit Dashboard for Enterprise Project Portfolio Management**
 
-This project simulates an enterprise-scale engineering portfolio to analyze **project risk exposure, workforce capacity constraints, and operational disruptions** in complex R&D environments such as semiconductor or automotive industries.
+## 📖 Project Overview
+This project simulates an enterprise-scale engineering portfolio to analyze **project risk exposure, workforce capacity constraints, and operational disruptions** in complex R&D environments such as semiconductor or automotive industries. 
 
 The system models **120 projects and 80 employees** and introduces realistic enterprise dynamics including:
-
-- resource capacity constraints
-- project dependencies
-- operational issues and rework
-- portfolio-level risk exposure
+- 👥 Resource capacity constraints
+- 🔗 Project dependencies (DAG)
+- ⚠️ Operational issues and rework
+- 📉 Portfolio-level risk exposure
 
 The goal is to demonstrate how **simulation, SQL analytics, and interactive dashboards** can be combined to monitor portfolio health and identify potential bottlenecks.
 
 ---
 
-## Dashboard Preview
-
+## 🖥️ Dashboard Preview
 The Streamlit dashboard provides an overview of portfolio health, departmental risk exposure, and operational rework trends.
 
-![Portfolio Dashboard](images/dashboard.jpg)
+![Portfolio Dashboard](images/dashboard.png)
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-**Simulation Engine**
-- Python
-- Object-Oriented Programming
+**⚙️ Simulation Engine**
+- Python (Object-Oriented Programming)
 
-**Data Engineering**
-- Pandas
-- NumPy
+**🗄️ Data Engineering**
+- Pandas & NumPy
 - SQLite
 
-**Analytics**
+**🔍 Analytics**
 - SQL (CTE queries)
 - Window Functions (LAG, DENSE_RANK)
 
-**Visualization**
+**📈 Visualization**
 - Streamlit
 - Plotly
 
 ---
 
-## Key Features
+## ✨ Key Features
 
-### Portfolio Simulation Engine
-
+### 🏢 Portfolio Simulation Engine
 The simulation models a complex multi-project environment where:
+- Employees have weekly capacity limits.
+- Projects require varying workloads and durations.
+- Operational issues generate additional rework.
+- Project dependencies affect progress.
 
-- employees have weekly capacity limits
-- projects require varying workloads and durations
-- operational issues generate additional rework
-- project dependencies affect progress
+### 🕸️ Dependency-Aware Project Network
+Projects can depend on other projects through a **Directed Acyclic Graph (DAG)** structure. This simulates real-world situations where certain projects cannot progress until upstream tasks are completed.
 
-This allows realistic modeling of **enterprise project portfolio dynamics**.
-
----
-
-### Dependency-Aware Project Network
-
-Projects can depend on other projects through a **Directed Acyclic Graph (DAG)** structure.
-
-This simulates real-world situations where certain projects cannot progress until upstream tasks are completed.
-
----
-
-### Workforce Capacity Modeling
-
+### ⏳ Workforce Capacity Modeling
 Employee productivity includes:
+- Weekly capacity limits.
+- Multi-project context switching penalties (15%).
+- Department-based project assignments.
+*This allows the simulation to capture resource bottlenecks and utilization effects.*
 
-- weekly capacity limits
-- multi-project context switching penalties
-- department-based project assignments
+### 🎲 Stochastic Operational Disruptions
+Operational issues are generated using a **Poisson distribution**. These issues introduce additional rework hours and create unpredictable disruptions in project timelines.
 
-This allows the simulation to capture **resource bottlenecks and utilization effects**.
+### 📊 Risk Exposure Analytics (SQL)
+The simulation outputs are stored in a **relational SQLite database** and analyzed using SQL. Key analytics include:
+- Departmental risk exposure & Workforce utilization.
+- Project delay forecasting & Dependency impact analysis.
 
----
-
-### Stochastic Operational Disruptions
-
-Operational issues are generated using a **Poisson distribution**.
-
-These issues introduce additional rework hours and create unpredictable disruptions in project timelines.
-
----
-
-### Risk Exposure Analytics (SQL)
-
-The simulation outputs are stored in a **relational SQLite database** and analyzed using SQL.
-
-Key analytics include:
-
-- departmental risk exposure
-- workforce utilization
-- project delay forecasting
-- dependency impact analysis
-
-SQL queries use modern analytics patterns such as:
-
-- Common Table Expressions (CTE)
-- Window Functions (LAG, DENSE_RANK)
-
----
-
-### Interactive Portfolio Dashboard
-
+### 📱 Interactive Portfolio Dashboard
 The Streamlit dashboard allows users to explore:
+- Portfolio risk exposure by department.
+- Weekly rework growth trends.
+- The most delayed projects in the portfolio.
 
-- portfolio risk exposure by department
-- weekly rework growth trends
-- the most delayed projects in the portfolio
-- dependency status for at-risk projects
-  
 ---
 
-## ⚙️ How to Run
-1. Clone the repo: `git clone https://github.com/omaewamoushindei/enterprise-ppm-risk-simulator.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the dashboard: `streamlit run app.py`
+## 🚀 How to Run
+
+1. **Clone the repository:**
+```bash
+git clone [https://github.com/omaewamoushindei/enterprise-ppm-risk-simulator.git](https://github.com/omaewamoushindei/enterprise-ppm-risk-simulator.git)
+
+ * Install dependencies:
+pip install -r requirements.txt
+
+ * Run the dashboard:
+streamlit run app.py
+
+💡 Example Insights
+The analytics layer can reveal critical business insights such as:
+ * Which departments accumulate the highest risk exposure.
+ * How operational issues affect portfolio performance over time.
+ * Which projects are most likely to experience severe cascading delays.
+📂 Project Structure
+enterprise-ppm-risk-simulator
+│
+├── data/
+│   ├── enterprise_portfolio_results.csv
+│   └── employee_capacity_audit.csv
+│
+├── images/
+│   └── dashboard.png
+│
+├── app.py
+├── portfolio.db
+├── simulation.ipynb
+├── requirements.txt
+└── README.md
+
+🎯 Purpose:
+This project was created as a portfolio analytics demonstration to showcase how simulation, SQL analytics, and data visualization can be combined to analyze complex enterprise project portfolios.
+
