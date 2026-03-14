@@ -4,7 +4,7 @@
 The Streamlit dashboard provides an overview of portfolio health,
 departmental risk exposure, and operational rework trends.
 
-![Portfolio Dashboard](images/dashboard.png)
+![Portfolio Dashboard](images/dashboard.jpg)
 ## 📌 Project Overview
 This platform simulates a complex engineering portfolio (120 projects, 80 employees) to analyze risk exposure and resource bottlenecks in an enterprise environment (e.g., Semiconductor or Automotive industries). It moves beyond static planning by introducing stochastic modeling, project dependencies, and real-time capacity constraints.
 
